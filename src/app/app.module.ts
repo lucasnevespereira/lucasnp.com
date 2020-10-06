@@ -8,7 +8,6 @@ import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './header/modal/modal.component';
-import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { AdminComponent } from './admin/admin.component';
     HeaderComponent,
     BannerComponent,
     ContactComponent,
-    ModalComponent,
-    AdminComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

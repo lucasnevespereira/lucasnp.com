@@ -8,10 +8,11 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ContentService } from './content.service';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
-  declarations: [ContentComponent, ProjectsComponent, SkillsComponent, ArticlesComponent],
+  declarations: [ContentComponent, ProjectsComponent, SkillsComponent, ArticlesComponent, AdminComponent],
   imports: [
     CommonModule,
     HttpClientModule,
