@@ -1,0 +1,12 @@
+.ui.cards {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .ui.cards {
+    display: flex;
+    justify-content: center;
+  }
+}

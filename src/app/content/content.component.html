@@ -1,0 +1,14 @@
+<div class="ui container">
+  <div class="ui secondary pointing menu">
+    <a routerLink="/" routerLinkActive="active" class="item"     [routerLinkActiveOptions]="{ exact: true }"
+      >Projects</a
+    >
+    <a routerLink="/skills" routerLinkActive="active" class="item"
+      >Skills</a
+    >
+    <a routerLink="/articles" routerLinkActive="active" class="item">Articles</a>
+  </div>
+  <div class="ui main">
+    <router-outlet></router-outlet>
+  </div>
+</div>

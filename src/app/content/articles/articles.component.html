@@ -1,0 +1,19 @@
+<div class="ui cards">
+  <div class="card" *ngFor="let article of articles">
+    <div class="content">
+      <img class="right floated mini ui image" src="{{rootUrl}}{{article.image.url}}">
+      <div class="header">
+        {{article.title}}
+      </div>
+      <div class="description">
+        {{article.description}}
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <a class="ui basic blue button" [href]="article.link" target="_blank" >View Article</a>
+      </div>
+    </div>
+  </div>
+</div>
+

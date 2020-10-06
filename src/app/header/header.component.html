@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="header__title">
+    LNP
+  </div>
+
+  <a href="/">
+    <div class="header__title--lg" >
+      Lucas Neves Pereira
+    </div>
+  </a>
+  
+  <div class="header__about" (click)="onClickModal()" >
+    <span>Who am I ?</span>
+  </div>
+
+  <div class="header__modal" *ngFor="let info of infos">
+    <app-modal (close)="onClickModal()" *ngIf="modalOpen">
+      <div modalTitle>About me</div>
+      <p>{{ info.bio }}</p>
+      <ng-container modalFooter>
+        <button class="ui button" (click)="onClickModal()">Close Me</button>
+      </ng-container>
+    </app-modal>
+  </div>
+
+</header>
