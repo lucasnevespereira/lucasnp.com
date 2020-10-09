@@ -1,20 +1,22 @@
 <div class="ui cards">
   <div class="card" *ngFor="let project of projects">
     <div class="content">
-      <img class="right floated mini ui image" src="{{rootUrl}}{{ project.image.url }}">
+      <img class="right floated mini ui image" src="{{ project.image.url }}" />
       <div class="header">
-        {{project.title}}
+        {{ project.title }}
       </div>
       <div class="meta">
-        {{project.type}}
+        {{ project.type }}
       </div>
       <div class="description">
-        {{project.description}}
+        {{ project.description }}
       </div>
     </div>
     <div class="extra content">
       <div class="ui two buttons">
-        <a class="ui basic blue button" [href]="project.link" target="_blank" >View Project</a>
+        <a class="ui basic blue button" [href]="project.link" target="_blank"
+          >View Project</a
+        >
       </div>
     </div>
   </div>
