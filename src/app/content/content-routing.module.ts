@@ -10,22 +10,29 @@ const routes: Routes = [
   {
     path: '', component: ContentComponent, children: [
       {
-        path: '', 
-        component: ProjectsComponent, 
+        path: '',
+        component: ProjectsComponent,
       },
       {
         path: 'skills',
+        pathMatch: 'prefix',
         component: SkillsComponent,
       },
       {
         path: 'articles',
+        pathMatch: 'prefix',
         component: ArticlesComponent,
       },
       {
         path: 'admin',
+        pathMatch: 'prefix',
         component: AdminComponent,
       },
-    ], 
+      {
+        path: '**', redirectTo: '/',
+        pathMatch: 'prefix',
+      }
+    ],
   }
 ];
 
