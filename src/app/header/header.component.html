@@ -1,26 +1,24 @@
 <header class="header">
-  <div class="header__title">
-    LNP
-  </div>
+  <div class="header__title">LNP</div>
 
   <a href="/">
-    <div class="header__title--lg" >
-      Lucas Neves Pereira
-    </div>
+    <div class="header__title--lg">Lucas Neves Pereira</div>
   </a>
-  
-  <div class="header__about" (click)="onClickModal()" >
+
+  <div class="header__about" (click)="onClickModal()">
     <span>Who am I ?</span>
   </div>
 
   <div class="header__modal" *ngFor="let info of infos">
     <app-modal (close)="onClickModal()" *ngIf="modalOpen">
       <div modalTitle>About me</div>
-      <p>{{ info.bio }}</p>
+      <div class="header__modal__content">
+        <p>{{ info.bio }}</p>
+        <img class="ui small circular image" src="{{ info.image.url }}" />
+      </div>
       <ng-container modalFooter>
         <button class="ui button" (click)="onClickModal()">Close Me</button>
       </ng-container>
     </app-modal>
   </div>
-
 </header>
