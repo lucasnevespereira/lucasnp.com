@@ -8,6 +8,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './header/modal/modal.component';
+import { AngularTiltModule } from 'angular-tilt';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ModalComponent } from './header/modal/modal.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularTiltModule
   ],
   providers: [],
   bootstrap: [AppComponent]
