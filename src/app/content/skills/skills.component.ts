@@ -15,7 +15,7 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() {
     this.contentService.getAllSkills().pipe(
-      map(skills => skills.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime()))
+      map(skills => skills.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()))
     ).subscribe((res) => {
       this.skills = res;
     });

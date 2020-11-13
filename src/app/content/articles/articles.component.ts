@@ -15,7 +15,7 @@ export class ArticlesComponent implements OnInit {
 
   ngOnInit() {
     this.contentService.getAllArticles().pipe(
-      map(articles => articles.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime()))
+      map(articles => articles.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()))
     ).subscribe((res) => {
       this.articles = res;
     });
