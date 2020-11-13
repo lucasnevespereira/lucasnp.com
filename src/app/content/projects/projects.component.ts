@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.contentService.getAllProjects().pipe(
-      map(projects => projects.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()))
+      map(projects => projects.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime()))
     ).subscribe((res) => {
       this.projects = res;
     });
