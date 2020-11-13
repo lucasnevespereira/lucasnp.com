@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { ContentService } from '../content.service';
 
 @Component({
@@ -9,10 +10,12 @@ import { ContentService } from '../content.service';
 export class ProjectsComponent implements OnInit {
   projects = [];
 
-  constructor(private contentService: ContentService) {}
+  constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    this.contentService.getAllProjects().subscribe((res) => {
+    this.contentService.getAllProjects().pipe(
+      map(projects => projects.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime()))
+    ).subscribe((res) => {
       this.projects = res;
     });
   }
