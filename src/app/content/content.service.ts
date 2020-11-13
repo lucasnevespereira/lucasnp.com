@@ -9,6 +9,8 @@ interface ProjectsResponse {
   description: string;
   type: string;
   link: string;
+  published_at: string;
+  createdAt: string;
   image: {
     url: string;
   };
@@ -18,6 +20,8 @@ interface SkillsResponse {
   id: string;
   title: string;
   description: string;
+  published_at: string;
+  createdAt: string;
 }
 
 interface ArticlesResponse {
@@ -25,6 +29,8 @@ interface ArticlesResponse {
   title: string;
   description: string;
   link: string;
+  published_at: string;
+  createdAt: string;
   image: {
     url: string;
   };
@@ -33,6 +39,8 @@ interface ArticlesResponse {
 interface SocialsResponse {
   id: string;
   link: string;
+  published_at: string;
+  createdAt: string;
   image: {
     url: string;
   }
@@ -41,6 +49,8 @@ interface SocialsResponse {
 interface InfosResponse {
   id: string;
   bio: string;
+  published_at: string;
+  createdAt: string;
   image?: {
     url: string;
   }
@@ -75,6 +85,6 @@ export class ContentService {
     return this.http.get<InfosResponse[]>(`${this.rootUrl}/infos`);
   }
 
-  
+
 
 }
