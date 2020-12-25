@@ -15,7 +15,9 @@
     <app-modal (close)="onClickModal()" *ngIf="modalOpen">
       <div modalTitle>About me</div>
       <div class="header__modal__content">
-        <p>{{ info.bio }}</p>
+        <markdown ngPreserveWhitespaces>
+          {{ info.bio }}
+        </markdown>
         <img class="ui small rounded image" src="{{ info.image.url }}" />
       </div>
       <ng-container modalFooter>
