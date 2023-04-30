@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{- partial "head.html" . -}}
+
+<body data-theme="{{ .Site.Params.defaultColor | default "auto" }}" class="notransition">
+    {{- partial "scriptsBodyStart.html" . -}}
+    {{- partial "header.html" . -}}
+    <div class="wrapper">
+        {{ partial "bio" . }}
+        <main aria-label="Content">
+            <div class="posts-section">
+                <h3 class="posts-item-note" aria-label="Recent Posts">Some Projects</h3>
+                {{ $projects := where .Site.RegularPages "Type" "projects" }}
+                {{ range first 2 $projects }}
+                {{ partial "projectCard" . }}
+                {{ end }}
+                {{ if gt (len $projects) 5 }}
+                <p>
+                    <a href="/posts/">See more projects</a>
+                </p>
+                {{ end }}
+            </div>
+            <div class="posts-section">
+                <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
+                {{ $postsToShow := where .Site.RegularPages "Type" "posts" }}
+                {{/* Show last 5 posts in reverse date order */}}
+                {{ $posts := $postsToShow.ByDate.Reverse }}
+                {{ range first 3 $posts }}
+                {{ partial "postCard" . }}
+                {{ end }}
+                {{ if gt (len $posts) 5 }}
+                <p>
+                    <a href="/posts/">See all posts</a>
+                </p>
+                {{ end }}
+            </div>
+        </main>
+    </div>
+    {{- partial "footer.html" . -}}
+    {{- partial "scriptsBodyEnd.html" . -}}
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{{ $avatar_img := .Site.Params.author.avatar }}
+{{ $avatar_img_alt := .Site.Params.author.name }}
+{{ $image := resources.Get $avatar_img }}
+<div class="author">
+    {{if $avatar_img}}
+    <img class="author-avatar" src="{{$avatar_img}}" alt="{{ $avatar_img_alt }}">
+    {{end}}
+    <h2 class="author-name">{{ .Site.Params.author.intro }}</h2>
+    <p class="author-bio">{{ .Site.Params.author.description }}</p>
+</div>
