@@ -146,6 +146,12 @@
         color: $dark-white;
       }
 
+      .menu-icon {
+        svg {
+          fill: $dark-white;
+        }
+      }
+
       @include media-query($on-mobile) {
         background-color: $dark-black;
         border-color: $dark-light;
@@ -173,6 +179,15 @@
 
         &:hover,
         &focus {
+          color: $dark-white;
+        }
+      }
+    }
+
+    .post-item-meta {
+      .tag {
+        a {
+          border: 1px solid $dark-white;
           color: $dark-white;
         }
       }

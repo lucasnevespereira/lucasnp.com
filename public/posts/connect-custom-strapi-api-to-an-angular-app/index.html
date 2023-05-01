@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Connect custom Strapi API to an Angular App | Lucas Neves Pereira</title>
+<meta property="og:title" content="Connect custom Strapi API to an Angular App | Lucas Neves Pereira" />
+<meta name="twitter:title" content="Connect custom Strapi API to an Angular App | Lucas Neves Pereira" />
+<meta itemprop="name" content="Connect custom Strapi API to an Angular App | Lucas Neves Pereira" />
+<meta name="application-name" content="Connect custom Strapi API to an Angular App | Lucas Neves Pereira" />
+<meta property="og:site_name" content="Lucas Neves Pereira" />
+
+<meta name="description" content="Learn how to connect your Angular app to a custom Strapi backend.">
+<meta itemprop="description" content="Learn how to connect your Angular app to a custom Strapi backend." />
+<meta property="og:description" content="Learn how to connect your Angular app to a custom Strapi backend." />
+<meta name="twitter:description" content="Learn how to connect your Angular app to a custom Strapi backend." />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="https://lucasnp.com/" />
+  <meta property="og:image" content="https://lucasnp.com/" />
+  <meta name="twitter:image" content="https://lucasnp.com/" />
+  <meta name="twitter:image:src" content="https://lucasnp.com/" />
+
+
+
+
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2020-10-16T10:27:46Z />
+    <meta property="article:published_time" content=2020-10-16T10:27:46Z />
+
+    
+    <meta property="og:article:author" content="Lucas neves pereira" />
+    <meta property="article:author" content="Lucas neves pereira" />
+    <meta name="author" content="Lucas neves pereira" />
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Connect custom Strapi API to an Angular App",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2020-10-16",
+        "description": "Learn how to connect your Angular app to a custom Strapi backend.",
+        "wordCount":  1606 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2020-10-16",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Lucas Neves Pereira"
+        }
+    }
+    </script>
+
+
+
+    <meta name="generator" content="Hugo 0.105.0">
+
+    
+
+    <link rel="canonical" href="https://lucasnp.com/posts/connect-custom-strapi-api-to-an-angular-app/"><link href="/sass/main.min.158c80242c457d20264317ab3fca3d9851c186f360bc7f388ef48bc6c9571b0f.css" rel="stylesheet"><link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+
+    
+    </head>
+<body data-theme = "auto" class="notransition">
+<script src="/js/themeLoader.min.3c3396ae9effcbd02e7064baa7b435ffe6560bcd7fec0b428a470d3a128f2220.js"></script>
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+  <main class="page-content" aria-label="Content">
+    <article>
+      <header class="header">
+        <h1 class="header-title">Connect custom Strapi API to an Angular App</h1>
+         
+        <div class="post-meta">
+          <time datetime="2020-10-16T10:27:46&#43;00:00" itemprop="datePublished">
+            16 Oct 2020
+          </time>
+        </div>
+        
+      </header>
+      <div class="page-content"><p><img src="https://miro.medium.com/max/2400/1*qL0ZN2R2wncqGxmLtK1F1g.png" alt=""></p>
+<p>I recently decided to rebuild my portfolio with <em>Angular</em>. The problem is that I wanted to easily post and update my projects, I first thought about build an <em>NodeJS/Express API</em> connected with MongoDB but this can be time consuming for me knowing that I have others side projects with a lot of work to do.</p>
+<p>I decided to take a look into headless CMS, that&rsquo;s when I find out about<a href="https://medium.com/u/ace2e82e28e6?source=post_page-----e03ea487796e--------------------------------">Strapi</a>. A young french start-up that gives the exact solution I was looking for.</p>
+<p>What is Strapi in a few words ?</p>
+<ul>
+<li>Flexible, open-source Headless CMS</li>
+<li>Freedom, for developers</li>
+<li>Allows to easily manage and distribute API&rsquo;s with custom data.</li>
+</ul>
+<p>Now that you know what is Strapi let&rsquo;s see how to connect my front-end (Angular) with a Strapi API.<br>
+<em>I&rsquo;ll use the example of a portfolio for this tutorial.</em></p>
+<h2 id="starting-by-building-our-strapi-api">Starting by building our Strapi API</h2>
+<p>First, let&rsquo;s change our current directory to an workspace directory and generate a Strapi project with the following command:\</p>
+<p><code>npx create-strapi-app project-api --quickstart</code></p>
+<p><img src="https://miro.medium.com/max/2656/1*fVxUBXPqcsx-YDKRAoW32Q.png" alt=""></p>
+<p>Generate a Strapi api</p>
+<p>Once the project is setup, because you are using <code>--quickstart</code> strapi will run prompt you to your browser on <a href="http://localhost:1337/admin/">http://localhost:1337/admin/</a></p>
+<p><img src="https://miro.medium.com/max/2684/1*htbIdoSG8GgHkSlBexy4rA.png" alt=""></p>
+<p>Here you can register an admin user and login to the admin panel.</p>
+<p><img src="https://miro.medium.com/max/2708/1*XoLVIos1dQHgz-nXi4eN9g.png" alt=""></p>
+<p>Welcome to Strapi Admin panel 🙂 . Now let&rsquo;s create a collection type for our project data.<br>
+Go to <em>Content-Types Builder</em> and click on <em>Create new collection type.</em></p>
+<p><img src="https://miro.medium.com/max/2208/1*sa4EPcg2xQUyskU2ck1K3g.png" alt=""></p>
+<p>Enter a display name for your collection and then choose the fields you want and click <em>Save</em>. For my project fields I&rsquo;ll be choosing an _image _(media), a <em>title</em>(text) and a _description _(text).</p>
+<p><img src="https://miro.medium.com/max/3504/1*2JL6GqJN4w9WDeRKJmKaaw.png" alt=""></p>
+<p>Okay, If we go back to our admin panel we&rsquo;ll see projects added to our collection types. Let&rsquo;s <em>Add a New project.</em></p>
+<p><img src="https://miro.medium.com/max/5652/1*T7RVyQzrJOTxJsbLCteQyw.png" alt=""></p>
+<p>Here I have entered my data and I am now ready to save it.</p>
+<p><img src="https://miro.medium.com/max/4616/1*X7Zi5fQLoj2ItaxnfheneA.png" alt=""></p>
+<p>At the moment I saved my project as a draft but I don&rsquo;t want to publish it yet. So don&rsquo;t need to click the blue button <em>Publish</em> yet. Before that let&rsquo;s go to <em>Settings &gt; Roles &gt; Public.</em></p>
+<p>We are not implementing authentification, so we need to define permissions on our API to unauthenticated users.</p>
+<p>Here you can <em>select all</em> by I just need to find my projects so I&rsquo;ll be choosing just <em>find.</em></p>
+<p><img src="https://miro.medium.com/max/5632/1*nuQSTfe8nFP5NFcuyvKKfA.png" alt=""></p>
+<p>Okay, now that I have saved my permissions settings I can go back to my project that I have saved earlier and it that blue button <em>Publish.</em></p>
+<p><img src="https://miro.medium.com/max/4692/1*lRcfa9xrcPhCSIQJivxfQg.png" alt=""></p>
+<p>Looking good, we can start to test if it is working. You can use a tool like POSTMAN to make a get request or you can just go to <a href="http://localhost:1337/projects">http://localhost:1337/projects</a> to see if it&rsquo;s working.\</p>
+<p>Let&rsquo;s test this out 🙂</p>
+<p><img src="https://miro.medium.com/max/3356/1*3tU84jVW68goUeZVZptJ8g.png" alt=""></p>
+<p>Perfect, we can now build our front end and fetch our API.</p>
+<ol start="2">
+<li>Finishing by building our Angular App</li>
+</ol>
+<hr>
+<p>We&rsquo;ll enter once again in our workspace directory and generate an angular project with the *Angular CLI. *If you don&rsquo;t have this tool you can install it on your machine by running:</p>
+<p><code>npm install -g @angular/cli</code></p>
+<p>Then do the following:</p>
+<p><img src="https://miro.medium.com/max/2272/1*3cI8_FTCqrAcWJtlardR_g.png" alt=""></p>
+<p>Choose the default values (no routing) and (css) or just setup the project as you please. Project is generated we can now change to it&rsquo;s directory so <code>cd project-app</code> and run <code>ng serve -o</code> build the app and open it in the browser at <a href="http://localhost:4200/">http://localhost:4200</a></p>
+<p><img src="https://miro.medium.com/max/5644/1*V7cTktGIm0YrvA7qRq2aBw.png" alt=""></p>
+<p>Next, open the project in your text editor, i&rsquo;ll be using Visual Studio Code, and remove all html content in *app.component.html *and create a simple header component. You can generate it once again with the angular cli <code>ng g c header</code> , by the way you have a terminal integrated in Visual Studio Code hit cmd + J to open it. Once your component is generated you can add it&rsquo;s selector (defined in header.component.ts) to your app.component.html</p>
+<p><img src="https://miro.medium.com/max/5756/1*6EyWbcop0OwH5DOLoh815A.png" alt=""></p>
+<p>To have a bit of style in my app, I&rsquo;ll install semantic-ui-css and then import it to my global styles file. <code>npm i semantic-ui-css</code></p>
+<p><img src="https://miro.medium.com/max/5748/1*NcDVxRUI2pwqLogrSoeLsw.png" alt=""></p>
+<p>Added some sample html for my header component, using semantic-ui</p>
+<p><img src="https://miro.medium.com/max/2572/1*H4N0LSGiW-pI-kIN5VFuaw.png" alt=""></p>
+<p>And I&rsquo;ll add some sample html to display my projects in my app component.</p>
+<p><img src="https://miro.medium.com/max/3220/1*CMrfnQhXFBYAIu4HkpJvbg.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5756/1*2BQroFCqaYZ-D9VGGHjExA.png" alt=""></p>
+<p>Next step it is to replace our sample content with the projects data of our Strapi API, for that we will generate a service to fetch our data. Once again you can generate this using angular cli by running <code>ng g s data</code></p>
+<p><img src="https://miro.medium.com/max/3576/1*1pzSZqMqOXlFbLMEPK_S-A.png" alt=""></p>
+<p>We will use our data service to request the projects data of our Strapi API. To make such request we&rsquo;ll need to use the HttpClient incorporated in the Angular framework.<br>
+Let&rsquo;s import the <em>HttpClientModule</em> in our *app.module.ts *and then inject the HttpClient in our service class.</p>
+<p><img src="https://miro.medium.com/max/2924/1*a-t0pTIz9Ew2IZEMXqKEzQ.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/2984/1*EG-oHnSMDivR9fPRyLnZzg.png" alt=""></p>
+<p>Okay, we&rsquo;re ready to make a get to request to our API, for that let&rsquo;s import the API url we are fetching. I like to declare a variable in <em>environment.ts</em> that you can find in the <em>environments</em> folder in the *src *folder of your project. This is a good practice and it&rsquo;ll be useful later for deployment in production.\</p>
+<p>So, _src &gt; environments &gt; environment.ts _, there I&rsquo;ll declaremy apiUrl and import it in my data service. There I&rsquo;ll be creating a method called *getAllProjects() *where I&rsquo;ll make that famous GET request thats gets my projects.</p>
+<p><img src="https://miro.medium.com/max/5268/1*5Psui_N3oN44NLNOCg3y6g.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5732/1*UcsVGoAlyJwZhdibw6TXsQ.png" alt=""></p>
+<p>As you can see, my GET request here is waiting of type *any. *This is not a good practice in TypeScript and Angular. It&rsquo;s better if we define an interface to say exactly the type of data we are waiting for. I&rsquo;ll create an interface called *ProjectsResponse. *I&rsquo;ll use the data we&rsquo;ve seen before to help me build that interface.</p>
+<p><img src="https://miro.medium.com/max/5732/1*pEkCSG5FTheqK5k1bsW1rA.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5732/1*g2YynEwtef_mBJIEQmXbUg.png" alt=""></p>
+<p>Okay, this is better, I am saying that I&rsquo;m waiting an array of <em>ProjectsResponse</em> for my GET request.</p>
+<p>We are almost there, now that we can make the request we want well to display the response we are getting, we have to import the data service in our app component and then subscribe to the response or the data we are getting from getAllProjects() method. Then that response will be assigned to an empty array defined in our component 🙂.</p>
+<p><img src="https://miro.medium.com/max/5732/1*uh3vZqxBQqgvHDb37AGDNg.png" alt=""></p>
+<p>Cool, finally we can replace that sample data in our html template, we use <em>ngFor</em> to iterate our projects array that has now the data from our Strapi API 😀</p>
+<p><img src="https://miro.medium.com/max/5688/1*0VxmHsGqSN5V23iidCDhXw.png" alt=""></p>
+<p>Before showing how this is looking, there is something else I would like to show you. Right now the image.url of our project is being stored locally. So to access it we would actually need to fetch <em>http:localhost:1337/uploads/ourprojectimageurl</em></p>
+<p>I would like to change that and use an AWS service called S3. And for that strapi give us a provider to help us. Let me show how to set this up.</p>
+<h2 id="add-aws-s3-provider-to-strapi-api">Add AWS S3 Provider to Strapi API</h2>
+<p>Let&rsquo;s briefly open our project-api in our code editor.</p>
+<blockquote>
+<p>Tip: If you ever run into any problem or if you accidentally quit your terminal, you can run <em><code>npm run build</code></em> to build up project again and <em><code>npm run develop</code></em> to run the project again.</p>
+</blockquote>
+<p><img src="https://miro.medium.com/max/4096/1*NRepCr0QvIHGiUT7uf6UNg.png" alt=""></p>
+<p>Okay, start by install the provider for AWS S3 by running the following command <code>npm i strapi-provider-upload-aws-s3</code></p>
+<p><img src="https://miro.medium.com/max/2724/1*RtEwWyGXZV1QqE0hqLBJ0A.png" alt=""></p>
+<p>Now in your project, you have an extensions folder that it&rsquo;s currently empty. There we are going to create a folder upload and another sub-folder config with a settings.json file inside of it. There you are going to write the following object with our provider options.</p>
+<p>You can find this information in strapi documentation about upload<br>
+<a href="https://strapi.io/documentation/3.0.0-beta.x/plugins/upload.html#using-a-provider">https://strapi.io/documentation/3.0.0-beta.x/plugins/upload.html#using-a-provider</a></p>
+<p><img src="https://miro.medium.com/max/5756/1*4fsCfdeE9na4dWZ4kt8oMg.png" alt=""></p>
+<p>In this object we need to enter some access keys, region and name of our S3 Bucket. For that of course you need to create an AWS account if you don&rsquo;t have one an in you <em>AWS Management Console</em> go to *S3 *to create a new bucket.</p>
+<p><a href="https://s3.console.aws.amazon.com/s3">https://s3.console.aws.amazon.com/s3</a></p>
+<p><img src="https://miro.medium.com/max/5756/1*AydU03Mqo3GRgXXN8N87IA.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5756/1*A0jLb-3KBaoDw6P7CXawlA.png" alt=""></p>
+<p>After enter the name and the region of your bucket hit create. Perfect! You have created your bucket. Now make sure you go to Authorizations and unchecked Block Access to Public.</p>
+<p><img src="https://miro.medium.com/max/5632/1*3HgDjNzXMn8_2D-EwGy-CQ.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5632/1*0NLWcTb_z17LoNcT0c4uwg.png" alt=""></p>
+<p>To find the code for the region you have selected you can google AWS region code or search directly in AWS Documentation.</p>
+<p>[</p>
+<h2 id="regions-and-zones">Regions and Zones</h2>
+<h3 id="amazon-ec2-is-hosted-in-multiple-locations-world-wide-these-locations-are-composed-of-regions-availability-zones">Amazon EC2 is hosted in multiple locations world-wide. These locations are composed of Regions, Availability Zones&hellip;</h3>
+<p>docs.aws.amazon.com</p>
+<p>](<a href="https://docs.aws.amazon.com/en_en/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">https://docs.aws.amazon.com/en_en/AWSEC2/latest/UserGuide/using-regions-availability-zones.html</a>)</p>
+<p>Last important information we need it&rsquo;s our pair of keys: the access key and the secret key.</p>
+<p>To find that information, go to you *account &gt; credentials *and there you can generate a new pair of keys.</p>
+<p><img src="https://miro.medium.com/max/4492/1*gIFJCaBeoTrmkR0MGNPDNQ.png" alt=""></p>
+<blockquote>
+<p>I&rsquo;ll be changing mine after this tutorial, so these won&rsquo;t work :)</p>
+</blockquote>
+<p>Let&rsquo;s go back to our settings.json and enter the informations.</p>
+<p><img src="https://miro.medium.com/max/5632/1*i0IAY1z4O7PNZuFtysUVfg.png" alt=""></p>
+<p>Our provider it is all setup, you can stop your server if you want, hit a <code>npm run build</code> and <code>npm run develop</code> just to be sure.</p>
+<p>Now in your admin panel in <a href="http://localhost:1337/admin">http://localhost:1337/admin</a> login again and then re-upload your project image or create a new one as you want 🙂</p>
+<p>If we go back to <a href="http://localhost:1337/admin">http://localhost:133</a>7/projects we can see that we now have an S3 url instead of upload/ourimage in <em>image &gt; url</em></p>
+<p><img src="https://miro.medium.com/max/5756/1*Xc5A0lEIyw19LiiraEO6TA.png" alt=""></p>
+<h2 id="final-tests">Final Tests</h2>
+<p>Let&rsquo;s do our final tests, go back to the angular app, run it again if you need to and we can see our project being displayed. We made it !!! 😀</p>
+<p><img src="https://miro.medium.com/max/5756/1*00kidJv7yDEIAzBThW0ToA.png" alt=""></p>
+<p>Just to be sure everything it&rsquo;s working let&rsquo;s go back to our Strapi Admin panel and add a new project.</p>
+<p><img src="https://miro.medium.com/max/5756/1*VXiJLCwr6inZaeVYCgJwjQ.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5756/1*Qu4TaoruSuP-ykxtqeteIg.png" alt=""></p>
+<p>Looking good, now we have 2 projects. Time to see if everything worked fine in our front end (Angular).</p>
+<p><img src="https://miro.medium.com/max/5688/1*U3cuaX3w5pCyTjASSpwS6g.png" alt=""></p>
+<p>Yes! It is working 🙂. We are officially done.</p>
+<p>I hope you have liked this article, don&rsquo;t hesitate to contact me if you have any feedbacks or questions. I&rsquo;ll be glad to talk to you.</p>
+<p>I&rsquo;ve written another article to continue this one where I talk about how to deploy this to production.<br>
+<a href="https://pereiraneveslucas.medium.com/deploy-custom-strapi-api-connected-to-an-angular-app-7bc8c216e59b">https://pereiraneveslucas.medium.com/deploy-custom-strapi-api-connected-to-an-angular-app-7bc8c216e59b</a></p>
+<p>See you soon !!! 😀</p>
+</div>
+    </article>
+  </main>
+</div>
+<footer class="footer">
+  <span class="footer_item"> </span>
+  &nbsp;
+
+  <div class="footer_social-icons">
+<a href="https://github.com/lucasnevespereira" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/lucaasnp_" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/@lucaasnp" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://dev.to/lucasnevespereira" target="_blank" rel="noopener noreferrer me"
+    title="Dev">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+    <path
+        d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z" />
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/lucasnevespereira/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+  <small class="footer_copyright">
+    © 2023 Lucas Neves Pereira
+  </small>
+</footer>
+
+<script src="/js/themeSwitchnMenu.min.0904267a815ebda73875ff409ca6223ffd3f37bf08383da61dd3411fd2ef8b90.js"></script>
+</body>
+</html>

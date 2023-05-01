@@ -5,10 +5,8 @@ description: In this article I want to show how easily testing our code can be,
   it is not an effort, specially with the testing standard package incorporated
   in Go.
 tags:
-  - golang
+  - go
   - testing
-  - algorithms
-  - dev
 ---
 
 Hello dear readers, being a Junior to Mid Developer myself I've been of course faced to this weird "fear" of testing my code. Maybe it isn't fear, maybe we just do not talk much about it.

@@ -3,8 +3,9 @@ title: Build a desktop app with Wails & Vue
 date: 2021-08-10T10:27:46.698Z
 description: Learn how to build a desktop app with wails and vue.
 tags:
-  - golang
+  - go
   - wails
+  - vue
 ---
 
 ![](banner.png "Wails Vue cover")

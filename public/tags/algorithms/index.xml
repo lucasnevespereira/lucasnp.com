@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorithms on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/tags/algorithms/</link>
+    <description>Recent content in algorithms on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Mar 2021 13:41:42 +0000</lastBuildDate><atom:link href="https://lucasnp.com/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implement testing in Golang</title>
+      <link>https://lucasnp.com/posts/implement-testing-in-golang/</link>
+      <pubDate>Tue, 23 Mar 2021 13:41:42 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/implement-testing-in-golang/</guid>
+      <description>Hello dear readers, being a Junior to Mid Developer myself I&amp;rsquo;ve been of course faced to this weird &amp;ldquo;fear&amp;rdquo; of testing my code. Maybe it isn&amp;rsquo;t fear, maybe we just do not talk much about it.
+But either way I&amp;rsquo;ve been recently learning to program in Golang and I want it to do it seriously, in the right way. That&amp;rsquo;s why this time I did not skip the tests subject.</description>
+    </item>
+    
+  </channel>
+</rss>

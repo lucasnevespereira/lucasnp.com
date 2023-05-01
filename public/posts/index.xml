@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/posts/</link>
+    <description>Recent content in Posts on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Aug 2021 10:27:46 +0000</lastBuildDate><atom:link href="https://lucasnp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build a desktop app with Wails &amp; Vue</title>
+      <link>https://lucasnp.com/posts/build-a-desktop-app-with-wails-and-vue/</link>
+      <pubDate>Tue, 10 Aug 2021 10:27:46 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/build-a-desktop-app-with-wails-and-vue/</guid>
+      <description>Hi everyone! In this post I want to show how to quickly setup a desktop app using this amazing Go library Wails.
+Basically, Wails allows to write desktop softwares using web technologies like Angular, React, Vue, Svelte..
+Installing Wails Getting started with this library is quite easy, if you have all the prerequesites you just need to run a go get to install it in your local machine, if you need details this is going to add wails to the pkg directory of your GOPATH.</description>
+    </item>
+    
+    <item>
+      <title>SQL Migrations with Cobra &amp; Golang Migrate</title>
+      <link>https://lucasnp.com/posts/sql-migrations-with-cobra-and-golang-migrate/</link>
+      <pubDate>Tue, 04 May 2021 12:54:33 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/sql-migrations-with-cobra-and-golang-migrate/</guid>
+      <description>Hello dear readers, lately I&amp;rsquo;ve been struggling to run database migrations in Golang with sqlite3 but I have found a solution and I want to share it with you guys.
+Let&amp;rsquo;s do this Start by creating a simple project Golang project in your computer
+mkdir migration-cli cd migration-cli go mod init migration-cli Then get the cobra package
+go get -u github.com/spf13/cobra Open this in your favourite code editor and create and add a main.</description>
+    </item>
+    
+    <item>
+      <title>Gituser CLI - Switch between git accounts easily</title>
+      <link>https://lucasnp.com/posts/gituser-cli-switch-between-git-accounts-easily/</link>
+      <pubDate>Fri, 16 Apr 2021 12:24:21 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/gituser-cli-switch-between-git-accounts-easily/</guid>
+      <description>Hello there 🙂
+First of all you all may be wondering &amp;ldquo;What in the world is gituser??&amp;rdquo;
+Gituser is a command line interface made with Golang that helps to switch between different git user accounts.
+I have built this cli because I was using my laptop for my personal projects, my school projects and my work related projects. Meaning I had multiple git user accounts in my machine.
+Every time I had to type the following command:</description>
+    </item>
+    
+    <item>
+      <title>Write a Simple REST API in Golang</title>
+      <link>https://lucasnp.com/posts/write-a-simple-rest-api-in-golang/</link>
+      <pubDate>Tue, 13 Apr 2021 12:48:39 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/write-a-simple-rest-api-in-golang/</guid>
+      <description>Hello there 😀
+In this brief article I will explain how I write a REST API using Golang trying to follow some best practices.
+The source code to follow along if needed is here.
+Let&amp;rsquo;s do this 👍🏻 As an example we&amp;rsquo;ll be creating a very simple Post API.
+Structure the project Let&amp;rsquo;s jump to our terminal and create a new directory for our project and then init a go module.</description>
+    </item>
+    
+    <item>
+      <title>Implement testing in Golang</title>
+      <link>https://lucasnp.com/posts/implement-testing-in-golang/</link>
+      <pubDate>Tue, 23 Mar 2021 13:41:42 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/implement-testing-in-golang/</guid>
+      <description>Hello dear readers, being a Junior to Mid Developer myself I&amp;rsquo;ve been of course faced to this weird &amp;ldquo;fear&amp;rdquo; of testing my code. Maybe it isn&amp;rsquo;t fear, maybe we just do not talk much about it.
+But either way I&amp;rsquo;ve been recently learning to program in Golang and I want it to do it seriously, in the right way. That&amp;rsquo;s why this time I did not skip the tests subject.</description>
+    </item>
+    
+    <item>
+      <title>Deploy custom Strapi API connected to an Angular App</title>
+      <link>https://lucasnp.com/posts/deploy-custom-strapi-api-connected-to-an-angular-app/</link>
+      <pubDate>Fri, 13 Nov 2020 12:45:00 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/deploy-custom-strapi-api-connected-to-an-angular-app/</guid>
+      <description>Hello there, before starting this article I want to give you a bit of context. So, I wrote an article about how to build a custom API with Strapi and fetch it from an Angular app. If you haven&amp;rsquo;t read it i&amp;rsquo;ll link it right above 🙂.
+Connect custom Strapi API to an Angular App
+This article is a part 2 of that article as I am going to deploy the API on Heroku and the Angular app on Netlify.</description>
+    </item>
+    
+    <item>
+      <title>Connect custom Strapi API to an Angular App</title>
+      <link>https://lucasnp.com/posts/connect-custom-strapi-api-to-an-angular-app/</link>
+      <pubDate>Fri, 16 Oct 2020 10:27:46 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/connect-custom-strapi-api-to-an-angular-app/</guid>
+      <description>I recently decided to rebuild my portfolio with Angular. The problem is that I wanted to easily post and update my projects, I first thought about build an NodeJS/Express API connected with MongoDB but this can be time consuming for me knowing that I have others side projects with a lot of work to do.
+I decided to take a look into headless CMS, that&amp;rsquo;s when I find out aboutStrapi.</description>
+    </item>
+    
+    <item>
+      <title>Learn your basics or steps to be a successful Junior Developer</title>
+      <link>https://lucasnp.com/posts/learn-your-basics-or-steps-to-be-a-successful-junior-developer/</link>
+      <pubDate>Wed, 17 Jun 2020 18:12:02 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/learn-your-basics-or-steps-to-be-a-successful-junior-developer/</guid>
+      <description>Photo by Zan on Unsplash
+Hello I&amp;rsquo;m Lucas, I started Web Development last year and I work now at my first web developer job. I started web development with HTML5/CSS3 and then moved on directly to PHP and JavaScript . Well this is cool but I realized at my job that I was really missing a lot of basics and foundations about computer science and programming in general. If you do not have a mathematical / engineering background sometimes this can be challenging at your first job, because you&amp;rsquo;re just missing basics.</description>
+    </item>
+    
+  </channel>
+</rss>

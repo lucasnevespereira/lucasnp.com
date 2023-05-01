@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Build a desktop app with Wails &amp; Vue | Lucas Neves Pereira</title>
+<meta property="og:title" content="Build a desktop app with Wails &amp; Vue | Lucas Neves Pereira" />
+<meta name="twitter:title" content="Build a desktop app with Wails &amp; Vue | Lucas Neves Pereira" />
+<meta itemprop="name" content="Build a desktop app with Wails &amp; Vue | Lucas Neves Pereira" />
+<meta name="application-name" content="Build a desktop app with Wails &amp; Vue | Lucas Neves Pereira" />
+<meta property="og:site_name" content="Lucas Neves Pereira" />
+
+<meta name="description" content="Learn how to build a desktop app with wails and vue.">
+<meta itemprop="description" content="Learn how to build a desktop app with wails and vue." />
+<meta property="og:description" content="Learn how to build a desktop app with wails and vue." />
+<meta name="twitter:description" content="Learn how to build a desktop app with wails and vue." />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="https://lucasnp.com/" />
+  <meta property="og:image" content="https://lucasnp.com/" />
+  <meta name="twitter:image" content="https://lucasnp.com/" />
+  <meta name="twitter:image:src" content="https://lucasnp.com/" />
+
+
+
+
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2021-08-10T10:27:46Z />
+    <meta property="article:published_time" content=2021-08-10T10:27:46Z />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Build a desktop app with Wails \u0026 Vue",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2021-08-10",
+        "description": "Learn how to build a desktop app with wails and vue.",
+        "wordCount":  787 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2021-08-10",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Lucas Neves Pereira"
+        }
+    }
+    </script>
+
+
+
+    <meta name="generator" content="Hugo 0.105.0">
+
+    
+
+    <link rel="canonical" href="https://lucasnp.com/posts/build-a-desktop-app-with-wails-and-vue/"><link href="/sass/main.min.158c80242c457d20264317ab3fca3d9851c186f360bc7f388ef48bc6c9571b0f.css" rel="stylesheet"><link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+
+    
+    </head>
+<body data-theme = "auto" class="notransition">
+<script src="/js/themeLoader.min.3c3396ae9effcbd02e7064baa7b435ffe6560bcd7fec0b428a470d3a128f2220.js"></script>
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+  <main class="page-content" aria-label="Content">
+    <article>
+      <header class="header">
+        <h1 class="header-title">Build a desktop app with Wails &amp; Vue</h1>
+         
+        <div class="post-meta">
+          <time datetime="2021-08-10T10:27:46&#43;00:00" itemprop="datePublished">
+            10 Aug 2021
+          </time>
+        </div>
+        
+      </header>
+      <div class="page-content"><p><img src="banner.png" alt="" title="Wails Vue cover"></p>
+<p>Hi everyone!
+In this post I want to show how to quickly setup a desktop app using this amazing Go library <a href="https://github.com/wailsapp/wails"><strong>Wails</strong></a>.</p>
+<p>Basically, Wails allows to write desktop softwares using web technologies like Angular, React, Vue, Svelte..</p>
+<h2 id="installing-wails">Installing Wails</h2>
+<p>Getting started with this library is quite easy, if you have all the <a href="">prerequesites</a> you just need to run a <em>go get</em> to install it in your local machine, if you need details this is going to add wails to the <strong>pkg</strong> directory of your <strong>GOPATH</strong>.</p>
+<p>Go ahead and run the following command:</p>
+<pre tabindex="0"><code>go get -u github.com/wailsapp/wails/cmd/wails
+</code></pre><p>Once you&rsquo;ve installed it you can run <code>wails init</code> to create a new wails application.</p>
+<h2 id="how-wails-work">How Wails work</h2>
+<p>Normally, the <code>wails init</code> command prompt you some questions like the name of your app but also the front end tecnhologie you want to use.</p>
+<p>I&rsquo;ve named my app <code>randomapp</code> and I am choosing <em>VueJS</em> as a frontend framework.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fl4261aqdieeu3099aqb.png" alt="Screenshot 2021-08-06 at 17.43.31"></p>
+<p>This is going to generate all the files you need to get started.</p>
+<p>What I found very cool is the way that <em>wails</em> allows you to connect your backend logic to your frontend.</p>
+<p>There is a wails function named <code>bind</code> that does all the work for you as you can see in their example when you open <code>main.go</code>.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w54hnen856pofc1b5l5j.png" alt="Screenshot 2021-08-10 at 19.08.26"></p>
+<p>Here <code>app.bind(basic)</code> is binding the <code>basic</code> function, and we can access it from the frontend.</p>
+<p>Let&rsquo;s serve the application so I can show you how, for development the best way to serve this app is by open two terminal windows.</p>
+<p>One placed in the root of the project to run the backend with the following command: <code>wails serve</code></p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ltxfzrrgblaif8oj2fo5.png" alt="Screenshot 2021-08-10 at 19.14.26"></p>
+<p>And a second one placed in the frontend directory to run the frontend with the following command: <code>npm run serve</code></p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qv7ap4bx578023yd9jsb.png" alt="Screenshot 2021-08-10 at 19.15.24"></p>
+<p>Now if we visit <code>http://localhost:8080</code>, we can see our application</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1yw8bcnpib6qpq3dvi57.png" alt="Screenshot 2021-08-10 at 19.18.45"></p>
+<p>Good! Let&rsquo;s open a console in our browser to fetch that backend data by simply calling <code>backend.basic()</code>.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rkmt6eos2xeei60bu77f.png" alt="Screenshot 2021-08-10 at 19.22.37"></p>
+<p>We can see that we have access to our basic function binded from the backend that returns a &ldquo;Hello, World!&rdquo; string.</p>
+<p>That&rsquo;s basically how things work with Wails. Now let&rsquo;s put all of this in practice and build a random application.</p>
+<h2 id="build-the-actual-application">Build the actual application</h2>
+<h3 id="backend">Backend</h3>
+<p>Starting from the backend I&rsquo;ll get rid of the <code>basic</code> bind and function. Also I&rsquo;ll add a resizable option set to true in <code>wails.CreateApp</code> config so that our window later can be, well, resizable 🙂.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eb440et0fqq0yhezfata.png" alt="Screenshot 2021-08-10 at 19.29.47"></p>
+<p>So, instead of that basic function I&rsquo;ll create a very simple package that I will name <code>server</code> with a <code>server.go</code> file.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hhg97q1w1zcs4i2hl2tn.png" alt="Screenshot 2021-08-10 at 19.31.55"></p>
+<p>There I&rsquo;ll create a <code>struct</code> and a <code>New</code> function to return an instance of my <code>server</code> struct.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/veleygt7v6rrcfzxjeik.png" alt="Screenshot 2021-08-10 at 19.34.56"></p>
+<p>Next, I&rsquo;ll add to that a receiver function of Server that will just return some random data.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cybm4yiavwxd2pp7a2vz.png" alt="Screenshot 2021-08-10 at 19.35.54"></p>
+<p>Now the last step is to bind this using <code>app.Bind</code> in our <code>main.go</code> file.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u8xe3ak6885nysja0zgj.png" alt="Screenshot 2021-08-10 at 19.39.02"></p>
+<p>That&rsquo;s all we have to do for the backend data, we have kept it simple.</p>
+<h3 id="frontend">Frontend</h3>
+<p>Let&rsquo;s jump now to our frontend directory that is a VueJs app with some components already in place, we have a Home and an About page.</p>
+<p>I want to keep it simple so I&rsquo;ll delete the <code>components</code>, <code>store</code> and <code>views</code> folders. We only need the <code>App.vue</code>.</p>
+<p>Make sure to remove the unnecessary html tags from <code>App.vue</code> and to remove the <code>use(store)</code> and <code>use(router)</code> from the create app mount function in the <code>main.js</code> file.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c32nula6kax9muo7zza1.png" alt="Screenshot 2021-08-10 at 19.49.43"></p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ijlu0xryzgcnbhro0hb9.png" alt="Screenshot 2021-08-10 at 19.45.11"></p>
+<p>Okay, next let&rsquo;s add a button to our template with a click event binded to a <code>fetchData</code>.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/el0vij5o7y0p7nocwcnb.png" alt="Screenshot 2021-08-10 at 19.54.15"></p>
+<p>That <code>fetchData</code> method will call our backend as we did in the browser console previously. To the that we use <code>window.backend</code> and the we have access to our <code>Server</code> (because we bind it 💪🏻) and it&rsquo;s <code>GetRandomData()</code> function.</p>
+<p>The result from <code>GetRandomData</code> will be assigned to a template variable and the work is done!</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4siqoiku68nd12l4c0ib.png" alt="Screenshot 2021-08-10 at 20.00.56"></p>
+<p>Let&rsquo;s package of our code to test this out as a desktop app.</p>
+<h2 id="package-the-final-application">Package the final application</h2>
+<p>The final step is to simply package the application, or build the desktop app ready to use.</p>
+<p>For that we can stop the process running in our terminal windows for development and instead run the following command in the root of our project:</p>
+<pre tabindex="0"><code>wails build -p
+</code></pre><p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ogts7l0e130sblx2sgh0.png" alt="Screenshot 2021-08-10 at 20.05.05"></p>
+<p>Now if you go to the <code>build</code> directory of your project you have a <code>.app</code> or <code>.exe</code> depends on what operating system you are using.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nsvm474sdl29ewk3nhpn.png" alt="Screenshot 2021-08-10 at 20.05.46"></p>
+<p>You just have to open it and test our application!!</p>
+<p>_Quick Note: _ I&rsquo;ve changed the colour property in <code>main.go</code> to have a white background and then run <code>wails build -p</code> again 🙂</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8c140iwncfh81rrf8cp9.png" alt="Screenshot 2021-08-10 at 20.25.10"></p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q8ukdz221ii0ldus1ert.png" alt="Screenshot 2021-08-10 at 20.25.14"></p>
+<p>Seems to work just fine 👍🏼</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>That&rsquo;s it for this post, you now have an idea on how you can build your next desktop application using this <em>Golang</em> framework.</p>
+<p>Hope this will be helpful 😀</p>
+<p>See you soon 👋🏼</p>
+</div>
+    </article>
+  </main>
+</div>
+<footer class="footer">
+  <span class="footer_item"> </span>
+  &nbsp;
+
+  <div class="footer_social-icons">
+<a href="https://github.com/lucasnevespereira" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/lucaasnp_" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/@lucaasnp" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://dev.to/lucasnevespereira" target="_blank" rel="noopener noreferrer me"
+    title="Dev">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+    <path
+        d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z" />
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/lucasnevespereira/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+  <small class="footer_copyright">
+    © 2023 Lucas Neves Pereira
+  </small>
+</footer>
+
+<script src="/js/themeSwitchnMenu.min.0904267a815ebda73875ff409ca6223ffd3f37bf08383da61dd3411fd2ef8b90.js"></script>
+</body>
+</html>

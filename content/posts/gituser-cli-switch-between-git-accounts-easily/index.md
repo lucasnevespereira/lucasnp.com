@@ -5,8 +5,7 @@ description: Gituser is a command line interface made with Golang that helps to
   switch between different git user accounts.
 tags:
   - cli
-  - golang
-  - opensource
+  - go
   - git
 ---
 

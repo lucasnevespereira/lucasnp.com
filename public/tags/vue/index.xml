@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vue on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/tags/vue/</link>
+    <description>Recent content in vue on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Aug 2021 10:27:46 +0000</lastBuildDate><atom:link href="https://lucasnp.com/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build a desktop app with Wails &amp; Vue</title>
+      <link>https://lucasnp.com/posts/build-a-desktop-app-with-wails-and-vue/</link>
+      <pubDate>Tue, 10 Aug 2021 10:27:46 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/build-a-desktop-app-with-wails-and-vue/</guid>
+      <description>Hi everyone! In this post I want to show how to quickly setup a desktop app using this amazing Go library Wails.
+Basically, Wails allows to write desktop softwares using web technologies like Angular, React, Vue, Svelte..
+Installing Wails Getting started with this library is quite easy, if you have all the prerequesites you just need to run a go get to install it in your local machine, if you need details this is going to add wails to the pkg directory of your GOPATH.</description>
+    </item>
+    
+  </channel>
+</rss>

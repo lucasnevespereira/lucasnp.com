@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Deploy custom Strapi API connected to an Angular App | Lucas Neves Pereira</title>
+<meta property="og:title" content="Deploy custom Strapi API connected to an Angular App | Lucas Neves Pereira" />
+<meta name="twitter:title" content="Deploy custom Strapi API connected to an Angular App | Lucas Neves Pereira" />
+<meta itemprop="name" content="Deploy custom Strapi API connected to an Angular App | Lucas Neves Pereira" />
+<meta name="application-name" content="Deploy custom Strapi API connected to an Angular App | Lucas Neves Pereira" />
+<meta property="og:site_name" content="Lucas Neves Pereira" />
+
+<meta name="description" content="I wrote an article about how to build a custom API with Strapi and fetch it from an Angular app.">
+<meta itemprop="description" content="I wrote an article about how to build a custom API with Strapi and fetch it from an Angular app." />
+<meta property="og:description" content="I wrote an article about how to build a custom API with Strapi and fetch it from an Angular app." />
+<meta name="twitter:description" content="I wrote an article about how to build a custom API with Strapi and fetch it from an Angular app." />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+
+
+  <meta itemprop="image" content="https://lucasnp.com/" />
+  <meta property="og:image" content="https://lucasnp.com/" />
+  <meta name="twitter:image" content="https://lucasnp.com/" />
+  <meta name="twitter:image:src" content="https://lucasnp.com/" />
+
+
+
+
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2020-11-13T12:45:00Z />
+    <meta property="article:published_time" content=2020-11-13T12:45:00Z />
+
+    
+    <meta property="og:article:author" content="Lucas neves pereira" />
+    <meta property="article:author" content="Lucas neves pereira" />
+    <meta name="author" content="Lucas neves pereira" />
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Deploy custom Strapi API connected to an Angular App",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2020-11-13",
+        "description": "I wrote an article about how to build a custom API with Strapi and fetch it from an Angular app.",
+        "wordCount":  1022 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2020-11-13",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Lucas Neves Pereira"
+        }
+    }
+    </script>
+
+
+
+    <meta name="generator" content="Hugo 0.105.0">
+
+    
+
+    <link rel="canonical" href="https://lucasnp.com/posts/deploy-custom-strapi-api-connected-to-an-angular-app/"><link href="/sass/main.min.158c80242c457d20264317ab3fca3d9851c186f360bc7f388ef48bc6c9571b0f.css" rel="stylesheet"><link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+
+    
+    </head>
+<body data-theme = "auto" class="notransition">
+<script src="/js/themeLoader.min.3c3396ae9effcbd02e7064baa7b435ffe6560bcd7fec0b428a470d3a128f2220.js"></script>
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+  <main class="page-content" aria-label="Content">
+    <article>
+      <header class="header">
+        <h1 class="header-title">Deploy custom Strapi API connected to an Angular App</h1>
+         
+        <div class="post-meta">
+          <time datetime="2020-11-13T12:45:00&#43;00:00" itemprop="datePublished">
+            13 Nov 2020
+          </time>
+        </div>
+        
+      </header>
+      <div class="page-content"><p><img src="https://miro.medium.com/max/2824/1*DCp9r-g0IqzObEvkSXdLnw.png" alt=""></p>
+<p>Hello there, before starting this article I want to give you a bit of context. So, I wrote an article about how to build a custom API with Strapi and fetch it from an Angular app. If you haven&rsquo;t read it i&rsquo;ll link it right above 🙂.</p>
+<p><a href="https://pereiraneveslucas.medium.com/connect-custom-strapi-api-to-an-angular-app-e03ea487796e">Connect custom Strapi API to an Angular App</a></p>
+<p>This article is a part 2 of that article as I am going to deploy the <em>API</em> on Heroku and the <em>Angular app</em> on Netlify.</p>
+<h1 id="starting-by-deploying-strapi-api-on-heroku">Starting by deploying Strapi API on Heroku</h1>
+<p>If you have read the previous article, you know that we generated our Strapi project with a <code>--quickstart</code> tag. By default this set the database of our project to *sqlite. *Well, i&rsquo;ll be changing this to mongodb, of course your are free to choose the database of your choice. Strapi as documentation about how to change this.<br>
+<a href="https://strapi.io/documentation/v3.x/guides/databases.html#databases">https://strapi.io/documentation/v3.x/guides/databases.html#databases</a></p>
+<p>⚠ ️Attention! For information, by changing our database we are overriding our data. So the projects content-type we&rsquo;ve build before will stay there. But our actual project data will disappear. And we&rsquo;ll also be creating a new user.</p>
+<p>Assuming you already have mongodb or the database you&rsquo;ve choose installed on your machine let&rsquo;s head back to our <code>project-api</code> and launch it on out text editor. There we need to change the following file: <code>config/database.js</code></p>
+<p><img src="https://miro.medium.com/max/1928/1*0TGVq-8PvgujbofVMuGE9Q.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/2882/1*6HLDGTP7ZpLTFyGA-KD-_g.png" alt=""></p>
+<p>Here we are going to change our connector to mongoose. Also for now I&rsquo;ll be removing the unused <em>env</em> argument because i&rsquo;ll not be using environment variables but you can do it you are pushing this to a public repository for example, it is better 🙂 . You just have to create a <code>.env</code> file and paste your variables there.<br>
+Finally in my settings i&rsquo;ll remove the *client *and <em>filename</em> properties and change it to a single uri property and in my options change useNullasDefault to ssl.</p>
+<p><img src="https://miro.medium.com/max/5276/1*C7X6wYESeXL8V5XRne301w.png" alt=""></p>
+<p>Before talking about what we are going to paste in uri, let&rsquo;s install the strapi package to use mongoose. Just have to run <code>npm i strapi-connector-mongoose</code></p>
+<p><a href="https://www.npmjs.com/package/strapi-connector-mongoose">strapi-connector-mongoose</a></p>
+<p><img src="https://miro.medium.com/max/3696/1*6T7DSNRg5RxE2ExCU6-1Vg.png" alt=""></p>
+<p>Okay, now in our uri we need to paste the &ldquo;link&rdquo; to our database on mongodb atlas. For that you&rsquo;ll have to create a cluster. I already have one that&rsquo;ll be using. If you have no clue about how to create one I&rsquo;ll paste a link to the docs 🙂.<br>
+<a href="https://docs.atlas.mongodb.com/tutorial/create-new-cluster/">https://docs.atlas.mongodb.com/tutorial/create-new-cluster/</a></p>
+<p>Now in our cluster, hoping you&rsquo;ve created a cluster with a project. We can connect our project to our mongodb database. Just go to <em>Connect &gt; Connect your application &gt; Copy the srv uri</em>.</p>
+<p><img src="https://miro.medium.com/max/5132/1*7ZS-vtHt5-EAq9r2mbMgkg.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/2788/1*PdzwaP504ryRCha_ywEVBA.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/2788/1*Aco4NMIkzn7V2SDVblF5ig.png" alt=""></p>
+<p>Now back to our <code>database.js</code> we will be pasting that uri to our property and change the <username>, <password> and <dbname> tags to our actual username, password and dbname. For the dbname you can choose the name of your collection. For username and password if for any reason you don&rsquo;t recall it, you can go to <em>Database Access</em> on MongoDB Atlas. There you can add a new user or change your actual user.</p>
+<p><img src="https://miro.medium.com/max/2928/1*cM1drgvb-F1RgAk8dbR0kg.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5276/1*bLSTw6PbFWmSpCjz_NjWoQ.png" alt=""></p>
+<p>After adding your infos to the mongodb uri string, let&rsquo;s run <code>npm run develop</code> and create our new user.</p>
+<p><img src="https://miro.medium.com/max/5276/1*7v3sR-OpDdUeqO4AQ-n0BQ.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/3276/1*45WHwb_Gx2m0BLDQ1ThaNg.png" alt=""></p>
+<p>Perfect, now we see that we still have our projects content-type but we need to add them again. Let&rsquo;s do that and then it is finally time to deploy this.</p>
+<p><img src="https://miro.medium.com/max/4600/1*32j85odV_dXOMKd-IzjfXw.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5748/1*qJ86Djnc2dNy4Ffzx3Vh6A.png" alt=""></p>
+<p>You also need to give public permissions so our front end can fetch the API with all our projects.</p>
+<p><img src="https://miro.medium.com/max/5732/1*TKaqpFnX6hICxUir4bX4Vg.png" alt=""></p>
+<p>Alright now time to deploy our API. I&rsquo;ll be using Heroku. First of all init git on your projet by running <code>git init</code> on a new terminal window.</p>
+<p><img src="https://miro.medium.com/max/3348/1*cik650gb8-qC74BuZ5FFXQ.png" alt=""></p>
+<p>Then if you already know heroku and have an account, run <code>heroku login</code> . If not, create an heroku account on <a href="https://www.heroku.com/home">https://www.heroku.com/home</a> and then back on your terminal run <code>heroku login</code></p>
+<p><img src="https://miro.medium.com/max/4232/1*nTR2dVPYk_6dUWVoCSKfpg.png" alt=""></p>
+<p>After stopping our server on localhost:1337 and runned heroku login</p>
+<p>Now you can use heroku dashboard to create an app or just use the heroku cli and run <code>heroku create</code> or <code>heroku create &lt;app-name&gt;</code> if you want to tag your app with a custom name.</p>
+<p><img src="https://miro.medium.com/max/3952/1*oXeqeigoAahb-RtIm90GZA.png" alt=""></p>
+<p>The command <code>heroku create</code> added a remote repository. If you run <code>git remote -v</code> you can see where you are pushing your project.</p>
+<p>Before pushing we need to add our files and commit them.</p>
+<p><img src="https://miro.medium.com/max/3608/1*h5oLjEQbKZ6SIOKegVDa5Q.png" alt=""></p>
+<p>Now all we have to do is push our project to heroku and run <code>git push heroku master:main</code></p>
+<p>Information: <em>Following changes in the industry, Heroku has updated our default git branch name to <em><code>*main*</code></em>.</em></p>
+<p><img src="https://miro.medium.com/max/3608/1*VLdV0xfPjiYngHVf_JUd9g.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/3608/1*JB0mDVmdADIO5Dcu1VQ7jQ.png" alt=""></p>
+<p>Perfect 😀, my project is deployed on <a href="https://project-test-medium.herokuapp.com/">https://project-test-medium.herokuapp.com/</a> now to test this just run <code>heroku open</code> and hopefully it will open your browser with a nice Strapi page hosted on heroku.</p>
+<p><img src="https://miro.medium.com/max/2424/1*4_YFw0-25Ri6k6GrLhgDNg.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/3620/1*4fmx31UAM5zAjGEwrxkRsg.png" alt=""></p>
+<p>Well done! Our Strapi API it&rsquo;s in production 👍🏼</p>
+<h1 id="finishing-by-deploying-angular-app-on-netlify">Finishing by deploying Angular App on Netlify</h1>
+<p>It is time to deploy our front end to Netlify. First create an account on <a href="https://www.netlify.com/">https://www.netlify.com/</a> if you don&rsquo;t have one.</p>
+<p>Netlify works great with git, but I&rsquo;m choosing to show to do a manual deploy just to show how simple it is with Netlify.</p>
+<p>Let&rsquo;s head over to our angular app and open it in our text editor 🙂</p>
+<p><img src="https://miro.medium.com/max/1764/1*8voaQNFEu80smgbXUnNXJQ.png" alt=""></p>
+<p>There open your <code>environment.prod.ts </code>file and add the apiUrl property with your heroku strapi api url</p>
+<p><img src="https://miro.medium.com/max/4124/1*4po0HYZNx5qPP0BFyV5txw.png" alt=""></p>
+<p>Now let&rsquo;s build our app by running <code>ng build ----prod</code>in our terminal. This will generate a dist folter with our builded app inside it.</p>
+<p><img src="https://miro.medium.com/max/3520/1*KJ1-MgCGPH-1oiquKUKzCA.png" alt=""></p>
+<p>Let&rsquo;s reveal our builded app in the dist folder in the finder.</p>
+<p><img src="https://miro.medium.com/max/1604/1*rAeqdR48NxHgyzh_WRK0Ow.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/1604/1*f4SPVrHBN1z23hTRGjcNuw.png" alt=""></p>
+<p>Keep this window around, because this is the folder we are going to upload in Netlify. Now back to the Netlify dashboard, once you are login, go to sites and there drag and drop the builded folder <em>(project-app in my case).</em></p>
+<p><img src="https://miro.medium.com/max/2524/1*o1aRLRYw_K1jxmou0_Tnxw.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/4732/1*E-ZQspQr4UdGnp5lq9OVuA.png" alt=""></p>
+<p>Okay perfect my app is deployed, now if you want to change the domain name that it is given by default go to *Domain Settings &gt; Options &gt; Edit site name *and change it to whatever you want.</p>
+<p><img src="https://miro.medium.com/max/4948/1*GOtBEnleXVJ85n4BnsJ8dQ.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/4948/1*WA0k1wxgO42sMmhthRe89g.png" alt=""></p>
+<p>Perfect now my Angular app is deployed to Netlify and it is fetching from my heroku hosted Strapi API 😀</p>
+<p><img src="https://miro.medium.com/max/3952/1*SP3ydcuM67abj4HP5VOhug.png" alt=""></p>
+<p><img src="https://miro.medium.com/max/5680/1*Za_Zq6HY3UWIdQqO0j8NeA.png" alt=""></p>
+<p>We are officially done.</p>
+<p>I hope you have liked this article, don&rsquo;t hesitate to contact me if you have any feedbacks or questions. I&rsquo;ll be glad to talk to you.</p>
+<p>See you soon !!! 😀</p>
+</div>
+    </article>
+  </main>
+</div>
+<footer class="footer">
+  <span class="footer_item"> </span>
+  &nbsp;
+
+  <div class="footer_social-icons">
+<a href="https://github.com/lucasnevespereira" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/lucaasnp_" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/@lucaasnp" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="https://dev.to/lucasnevespereira" target="_blank" rel="noopener noreferrer me"
+    title="Dev">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+    <path
+        d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z" />
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/lucasnevespereira/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+  <small class="footer_copyright">
+    © 2023 Lucas Neves Pereira
+  </small>
+</footer>
+
+<script src="/js/themeSwitchnMenu.min.0904267a815ebda73875ff409ca6223ffd3f37bf08383da61dd3411fd2ef8b90.js"></script>
+</body>
+</html>

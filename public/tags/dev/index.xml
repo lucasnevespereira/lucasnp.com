@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dev on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/tags/dev/</link>
+    <description>Recent content in dev on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jun 2020 18:12:02 +0000</lastBuildDate><atom:link href="https://lucasnp.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn your basics or steps to be a successful Junior Developer</title>
+      <link>https://lucasnp.com/posts/learn-your-basics-or-steps-to-be-a-successful-junior-developer/</link>
+      <pubDate>Wed, 17 Jun 2020 18:12:02 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/learn-your-basics-or-steps-to-be-a-successful-junior-developer/</guid>
+      <description>Photo by Zan on Unsplash
+Hello I&amp;rsquo;m Lucas, I started Web Development last year and I work now at my first web developer job. I started web development with HTML5/CSS3 and then moved on directly to PHP and JavaScript . Well this is cool but I realized at my job that I was really missing a lot of basics and foundations about computer science and programming in general. If you do not have a mathematical / engineering background sometimes this can be challenging at your first job, because you&amp;rsquo;re just missing basics.</description>
+    </item>
+    
+  </channel>
+</rss>

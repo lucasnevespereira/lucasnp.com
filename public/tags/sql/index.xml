@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sql on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/tags/sql/</link>
+    <description>Recent content in sql on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 May 2021 12:54:33 +0000</lastBuildDate><atom:link href="https://lucasnp.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Migrations with Cobra &amp; Golang Migrate</title>
+      <link>https://lucasnp.com/posts/sql-migrations-with-cobra-and-golang-migrate/</link>
+      <pubDate>Tue, 04 May 2021 12:54:33 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/sql-migrations-with-cobra-and-golang-migrate/</guid>
+      <description>Hello dear readers, lately I&amp;rsquo;ve been struggling to run database migrations in Golang with sqlite3 but I have found a solution and I want to share it with you guys.
+Let&amp;rsquo;s do this Start by creating a simple project Golang project in your computer
+mkdir migration-cli cd migration-cli go mod init migration-cli Then get the cobra package
+go get -u github.com/spf13/cobra Open this in your favourite code editor and create and add a main.</description>
+    </item>
+    
+  </channel>
+</rss>

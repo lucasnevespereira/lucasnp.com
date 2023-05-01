@@ -6,8 +6,6 @@ description: I wrote an article about how to build a custom API with Strapi and
 tags:
   - angular
   - strapi
-  - heroku
-  - deployment
 author: Lucas Neves Pereira
 ---
 

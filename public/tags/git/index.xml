@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/tags/git/</link>
+    <description>Recent content in git on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Apr 2021 12:24:21 +0000</lastBuildDate><atom:link href="https://lucasnp.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gituser CLI - Switch between git accounts easily</title>
+      <link>https://lucasnp.com/posts/gituser-cli-switch-between-git-accounts-easily/</link>
+      <pubDate>Fri, 16 Apr 2021 12:24:21 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/gituser-cli-switch-between-git-accounts-easily/</guid>
+      <description>Hello there 🙂
+First of all you all may be wondering &amp;ldquo;What in the world is gituser??&amp;rdquo;
+Gituser is a command line interface made with Golang that helps to switch between different git user accounts.
+I have built this cli because I was using my laptop for my personal projects, my school projects and my work related projects. Meaning I had multiple git user accounts in my machine.
+Every time I had to type the following command:</description>
+    </item>
+    
+  </channel>
+</rss>

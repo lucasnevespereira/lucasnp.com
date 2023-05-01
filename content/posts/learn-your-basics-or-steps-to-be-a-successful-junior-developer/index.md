@@ -5,6 +5,7 @@ description: Hello, I've started Web Development last year and I work now at my
   first job. Wrote this article talks about some tips for junior web developers.
 tags:
   - dev
+  - basics
 author: Lucas Neves Pereira
 ---
 

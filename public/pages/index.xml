@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/pages/</link>
+    <description>Recent content in Pages on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://lucasnp.com/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello there 👋🏼</title>
+      <link>https://lucasnp.com/pages/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/pages/about/</guid>
+      <description>I am Lucas, a software developer living in Paris, France.
+I try to deepen my knowledge and skills on a daily basis, and I truly belive that one of the best ways to learn is by helping other developers like me adressing issues.
+Interested in Web technologies, Open-source projects, Headless CMS and in whatever my curiosity leads me to in the future.
+You can find all of my posts in this site or in my dev.</description>
+    </item>
+    
+  </channel>
+</rss>

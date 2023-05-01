@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>postgres on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/tags/postgres/</link>
+    <description>Recent content in postgres on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Apr 2021 12:48:39 +0000</lastBuildDate><atom:link href="https://lucasnp.com/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Write a Simple REST API in Golang</title>
+      <link>https://lucasnp.com/posts/write-a-simple-rest-api-in-golang/</link>
+      <pubDate>Tue, 13 Apr 2021 12:48:39 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/write-a-simple-rest-api-in-golang/</guid>
+      <description>Hello there 😀
+In this brief article I will explain how I write a REST API using Golang trying to follow some best practices.
+The source code to follow along if needed is here.
+Let&amp;rsquo;s do this 👍🏻 As an example we&amp;rsquo;ll be creating a very simple Post API.
+Structure the project Let&amp;rsquo;s jump to our terminal and create a new directory for our project and then init a go module.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,9 +4,7 @@ date: 2021-04-13T12:48:39.266Z
 description: In this brief article I will explain how I write a  simple REST API
   using Golang.
 tags:
-  - golang
-  - postgres
-  - docker
+  - go
   - restapi
 ---
 

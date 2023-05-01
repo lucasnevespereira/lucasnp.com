@@ -5,10 +5,9 @@ description: "Hello dear readers, lately I've been struggling to run database
   migrations in Golang with sqlite3 but I have found a solution and I want to
   share it with you guys. "
 tags:
-  - golang
+  - go
   - sql
   - cli
-  - dev
 ---
 
 ![sql migrations go image](banner.jpg "sql migrations go image")

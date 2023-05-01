@@ -5,7 +5,6 @@ description: Learn how to connect your Angular app to a custom Strapi backend.
 tags:
   - angular
   - strapi
-  - cms
 author: Lucas Neves Pereira
 ---
 

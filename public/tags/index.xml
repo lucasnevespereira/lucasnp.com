@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/tags/</link>
+    <description>Recent content in Tags on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Aug 2021 10:27:46 +0000</lastBuildDate><atom:link href="https://lucasnp.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>https://lucasnp.com/tags/go/</link>
+      <pubDate>Tue, 10 Aug 2021 10:27:46 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://lucasnp.com/tags/vue/</link>
+      <pubDate>Tue, 10 Aug 2021 10:27:46 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/vue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wails</title>
+      <link>https://lucasnp.com/tags/wails/</link>
+      <pubDate>Tue, 10 Aug 2021 10:27:46 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/wails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>https://lucasnp.com/tags/cli/</link>
+      <pubDate>Tue, 04 May 2021 12:54:33 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://lucasnp.com/tags/sql/</link>
+      <pubDate>Tue, 04 May 2021 12:54:33 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://lucasnp.com/tags/git/</link>
+      <pubDate>Fri, 16 Apr 2021 12:24:21 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>restapi</title>
+      <link>https://lucasnp.com/tags/restapi/</link>
+      <pubDate>Tue, 13 Apr 2021 12:48:39 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/restapi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://lucasnp.com/tags/testing/</link>
+      <pubDate>Tue, 23 Mar 2021 13:41:42 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angular</title>
+      <link>https://lucasnp.com/tags/angular/</link>
+      <pubDate>Fri, 13 Nov 2020 12:45:00 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strapi</title>
+      <link>https://lucasnp.com/tags/strapi/</link>
+      <pubDate>Fri, 13 Nov 2020 12:45:00 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/strapi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>basics</title>
+      <link>https://lucasnp.com/tags/basics/</link>
+      <pubDate>Wed, 17 Jun 2020 18:12:02 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/basics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dev</title>
+      <link>https://lucasnp.com/tags/dev/</link>
+      <pubDate>Wed, 17 Jun 2020 18:12:02 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/tags/dev/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

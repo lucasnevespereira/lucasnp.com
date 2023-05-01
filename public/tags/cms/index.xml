@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cms on Lucas Neves Pereira</title>
+    <link>https://lucasnp.com/tags/cms/</link>
+    <description>Recent content in cms on Lucas Neves Pereira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Oct 2020 10:27:46 +0000</lastBuildDate><atom:link href="https://lucasnp.com/tags/cms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Connect custom Strapi API to an Angular App</title>
+      <link>https://lucasnp.com/posts/connect-custom-strapi-api-to-an-angular-app/</link>
+      <pubDate>Fri, 16 Oct 2020 10:27:46 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/posts/connect-custom-strapi-api-to-an-angular-app/</guid>
+      <description>I recently decided to rebuild my portfolio with Angular. The problem is that I wanted to easily post and update my projects, I first thought about build an NodeJS/Express API connected with MongoDB but this can be time consuming for me knowing that I have others side projects with a lot of work to do.
+I decided to take a look into headless CMS, that&amp;rsquo;s when I find out aboutStrapi.</description>
+    </item>
+    
+  </channel>
+</rss>
