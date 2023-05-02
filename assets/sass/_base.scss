@@ -248,6 +248,7 @@ blockquote {
     &.blurry {
       animation: 0.2s ease-in forwards blur;
       -webkit-animation: 0.2s ease-in forwards blur;
+      height: 100vh;
     }
   }
 }
