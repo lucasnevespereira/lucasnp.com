@@ -6,7 +6,16 @@
     <description>Recent content in Home on Lucas Neves Pereira</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Aug 2021 10:27:46 +0000</lastBuildDate><atom:link href="https://lucasnp.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lucasnp.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lembra</title>
+      <link>https://lucasnp.com/projects/lembra/</link>
+      <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lucasnp.com/projects/lembra/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Build a desktop app with Wails &amp; Vue</title>
       <link>https://lucasnp.com/posts/build-a-desktop-app-with-wails-and-vue/</link>
@@ -122,9 +131,9 @@ Hello I&amp;rsquo;m Lucas, I started Web Development last year and I work now at
       
       <guid>https://lucasnp.com/pages/about/</guid>
       <description>I am Lucas, a software developer living in Paris, France.
-I try to deepen my knowledge and skills on a daily basis, and I truly belive that one of the best ways to learn is by helping other developers like me adressing issues.
-Interested in Web technologies, Open-source projects, Headless CMS and in whatever my curiosity leads me to in the future.
-You can find all of my posts in this site or in my dev.</description>
+I seek to deepen my knowledge and skills on a daily basis, and I truly believe that one of the best ways to learn is by helping other developers, like myself, address issues.
+Interested in Web technologies, Open-source projects, Command Line Interfaces and in whatever my curiosity leads me to in the future.
+You can find all of my posts on my website, as well as on dev.</description>
     </item>
     
   </channel>

@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lucasnp.com/</loc>
+    <lastmod>2023-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lucasnp.com/projects/lembra/</loc>
+    <lastmod>2023-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lucasnp.com/projects/</loc>
+    <lastmod>2023-03-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://lucasnp.com/posts/build-a-desktop-app-with-wails-and-vue/</loc>
     <lastmod>2021-08-10T10:27:46+00:00</lastmod>
   </url><url>
     <loc>https://lucasnp.com/tags/go/</loc>
-    <lastmod>2021-08-10T10:27:46+00:00</lastmod>
-  </url><url>
-    <loc>https://lucasnp.com/</loc>
     <lastmod>2021-08-10T10:27:46+00:00</lastmod>
   </url><url>
     <loc>https://lucasnp.com/posts/</loc>
@@ -45,9 +51,6 @@
     <lastmod>2021-04-13T12:48:39+00:00</lastmod>
   </url><url>
     <loc>https://lucasnp.com/projects/gituser/</loc>
-    <lastmod>2021-03-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lucasnp.com/projects/</loc>
     <lastmod>2021-03-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lucasnp.com/posts/implement-testing-in-golang/</loc>

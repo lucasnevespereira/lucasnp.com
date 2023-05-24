@@ -50,11 +50,15 @@ enableEmoji = true
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Lucas Neves Pereira"
   name = "Lucas Neves Pereira"
-  description = "Random Developer"
+  description = "Software Developer"
 
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/lucasnevespereira"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/lucasnevespereira/"
 
 [[params.socialIcons]]
 name = "twitter"
@@ -68,7 +72,4 @@ url = "https://www.youtube.com/@lucaasnp"
 name = "dev"
 url = "https://dev.to/lucasnevespereira"
 
-[[params.socialIcons]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/lucasnevespereira/"
 
